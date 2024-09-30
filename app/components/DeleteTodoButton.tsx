@@ -4,10 +4,9 @@ import { toast } from 'react-toastify';
 
 interface DeleteTodoButtonProps {
   todoId: number;
-  refetchTodos: () => void;
 }
 
-const DeleteTodoButton: React.FC<DeleteTodoButtonProps> = ({ todoId, refetchTodos }) => {
+const DeleteTodoButton: React.FC<DeleteTodoButtonProps> = ({ todoId }) => {
   const [{ loading: isPending }, deleteTodo] = useAxios(
     {
       url: `/api/todo/${todoId}`,
@@ -18,7 +17,6 @@ const DeleteTodoButton: React.FC<DeleteTodoButtonProps> = ({ todoId, refetchTodo
   const handleDelete = async () => {
     try {
       await deleteTodo();
-      refetchTodos();
     } catch (error) {
       toast('Failed to delete todo', { type: 'error' });
     }

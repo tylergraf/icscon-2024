@@ -1,17 +1,12 @@
-import Papa from './components/Papa'
-import { MyProvider } from './components/Context'
-const data = { "title_results": [{ "resultType": "title", "id": 1644435, "name": "Dune: Part Two", "type": "movie", "year": 2024, "imdb_id": "tt15239678", "tmdb_id": 693134, "tmdb_type": "movie" }, { "resultType": "title", "id": 1496273, "name": "Dune", "type": "movie", "year": 2021, "imdb_id": "tt1160419", "tmdb_id": 438631, "tmdb_type": "movie" }, { "resultType": "title", "id": 1112621, "name": "Dune", "type": "movie", "year": 1984, "imdb_id": "tt0087182", "tmdb_id": 841, "tmdb_type": "movie" }, { "resultType": "title", "id": 55440, "name": "Dune", "type": "tv_miniseries", "year": 2000, "imdb_id": "tt0142032", "tmdb_id": 19566, "tmdb_type": "tv" }, { "resultType": "title", "id": 1388737, "name": "The Dunes", "type": "movie", "year": 2021, "imdb_id": "tt6910678", "tmdb_id": 503017, "tmdb_type": "movie" }, { "resultType": "title", "id": 1740590, "name": "Dune: Part Three", "type": "movie", "year": 2026, "imdb_id": "tt31378509", "tmdb_id": 1170608, "tmdb_type": "movie" }, { "resultType": "title", "id": 1632984, "name": "Dune Dreams", "type": "movie", "year": 2021, "imdb_id": "tt11018038", "tmdb_id": 818926, "tmdb_type": "movie" }, { "resultType": "title", "id": 2718225, "name": "Dune", "type": "short_film", "year": 2020, "imdb_id": "tt12451788", "tmdb_id": 697620, "tmdb_type": "movie" }, { "resultType": "title", "id": 1619649, "name": "Dune Drifter", "type": "movie", "year": 2020, "imdb_id": "tt11835714", "tmdb_id": 744738, "tmdb_type": "movie" }, { "resultType": "title", "id": 1591332, "name": "The Dunes", "type": "movie", "year": 2019, "imdb_id": "tt4681432", "tmdb_id": 641213, "tmdb_type": "movie" }, { "resultType": "title", "id": 3163191, "name": "Dune: Prophecy", "type": "tv_series", "year": 2024, "imdb_id": "tt10466872", "tmdb_id": 90228, "tmdb_type": "tv" }, { "resultType": "title", "id": 1112625, "name": "Dune Warriors", "type": "movie", "year": 1991, "imdb_id": "tt0099474", "tmdb_id": 222339, "tmdb_type": "movie" }, { "resultType": "title", "id": 1637763, "name": "Dune World", "type": "movie", "year": 2021, "imdb_id": "tt14450978", "tmdb_id": 843281, "tmdb_type": "movie" }, { "resultType": "title", "id": 2656994, "name": "Dune Bug", "type": "short_film", "year": 1969, "imdb_id": "tt0064267", "tmdb_id": 378668, "tmdb_type": "movie" }, { "resultType": "title", "id": 3232129, "name": "Dünentod - Ein Nordsee-Krimi", "type": "tv_series", "year": 2023, "imdb_id": "tt24339158", "tmdb_id": 219558, "tmdb_type": "tv" }, { "resultType": "title", "id": 2703804, "name": "The Dunes", "type": "short_film", "year": 2019, "imdb_id": "tt11777528", "tmdb_id": 636492, "tmdb_type": "movie" }, { "resultType": "title", "id": 1388735, "name": "The Dune", "type": "movie", "year": 2014, "imdb_id": "tt2251648", "tmdb_id": 271683, "tmdb_type": "movie" }, { "resultType": "title", "id": 1586977, "name": "Dunechka", "type": "movie", "year": 2004, "imdb_id": "tt0470738", "tmdb_id": 625280, "tmdb_type": "movie" }, { "resultType": "title", "id": 1558725, "name": "Dune Surfer", "type": "movie", "year": 1988, "imdb_id": "tt0396572", "tmdb_id": 354144, "tmdb_type": "movie" }, { "resultType": "title", "id": 1587543, "name": "Dune", "type": "movie", "year": 1989, "imdb_id": "tt0309338", "tmdb_id": 627150, "tmdb_type": "movie" }, { "resultType": "title", "id": 3121728, "name": "The Dunera Boys", "type": "tv_miniseries", "year": 1985, "imdb_id": "tt0089059", "tmdb_id": 104529, "tmdb_type": "movie" }, { "resultType": "title", "id": 1822543, "name": "Dune: Alternative Edition", "type": "movie", "year": null, "imdb_id": null, "tmdb_id": 1289835, "tmdb_type": "movie" }, { "resultType": "title", "id": 4161984, "name": "Dünen: Europas wandernde Landschaften", "type": "tv_movie", "year": 2021, "imdb_id": "tt16445002", "tmdb_id": 1130036, "tmdb_type": "movie" }], "people_results": [] }
-const fetchData = (): Promise<typeof data> => {
-  return new Promise((resolve) => {
-    resolve(data);
-  });
-};
-export default async function Home() {
-  const da = await fetchData()
+import React from 'react';
 
+const Page: React.FC = () => {
   return (
-    <MyProvider data={da}>
-      <Papa></Papa>
-    </MyProvider>
+    <div>
+      <h1>Welcome to My Page</h1>
+      <p>This is a simple React component using TypeScript.</p>
+    </div>
   );
-}
+};
+
+export default Page;
