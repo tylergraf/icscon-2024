@@ -1,20 +1,18 @@
 'use client'
 import React, { useActionState } from 'react';
 import type { Todo } from '@prisma/client'
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import DeleteTodoButton from './DeleteTodoButton';
 import { handleAddTodo } from '../actions';
+import { type State } from '../actions';
 interface TodosProps {
   todos?: Todo[];
 }
 
-const Todos: React.FC<TodosProps> = ({todos}) => {
-  const [actionState, action, isPending] = useActionState(handleAddTodo, { errors: null } as { errors: any } | undefined);
+const Todos: React.FC<TodosProps> = ({ todos }) => {
+  const [actionState, action, isPending] = useActionState(handleAddTodo, { errors: null } as State);
   
   return (
     <div className='container mx-auto max-w-96 mt-16'>
-      <ToastContainer></ToastContainer>
       <h1 className='text-2xl font-bold mb-3'>Todos</h1>
 
       <form action={action} className='flex flex-row mb-3'>
