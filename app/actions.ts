@@ -3,7 +3,11 @@ import {createTodo} from '@/models/todo'
 import { revalidatePath } from 'next/cache';
 import { z } from "zod";
 
-export const handleAddTodo = async (previousState: { errors: any } | undefined, formData: FormData) => {
+type State = {
+  errors: any
+} | undefined
+
+export const handleAddTodo = async (previousState: State, formData: FormData) => {
   await new Promise(resolve => setTimeout(resolve, 2000));
 
   const schema = z.object({
